@@ -1,0 +1,167 @@
+/*Base de la page*/
+*{
+    box-sizing: border-box;
+    margine:0;
+    padding: 0;
+}
+
+body{
+    front-familly:Arial, sans-serif;
+    background: #071a2b;
+    color: white;
+    line-height: 1.6;
+}
+
+section{
+    padding: 50px 8%;
+}
+
+h2{
+    margin-bottom: 25px;
+}
+
+/*HEADER & NAVIGATION */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #061421;
+}
+
+logo {
+    font-size: 25px;
+    font-weight:bold;
+    color: #00d9ff;
+}
+
+nav{
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color:#00d9ff;
+}
+
+/*A PROPOS */
+.apropos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.apropos img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.apropos h1{
+    color: #00d9ff;
+    font-size: 35px;
+}
+.apropos a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00a8d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/*COMPETENCES*/
+.competences{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+}
+
+.competences{
+    background: #123d5c;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+/*GRILLE DES PROJETS*/
+.grille-projets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.carte{
+    display: flex;
+    flex-direction:column ;
+    /*3cartes par ligne*/
+    flex: 1 1 calc(33.333%-20px);
+    background: #123d5c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carte img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carte h3{
+    color: #00d9ff;
+    margin-top: 15px;
+}
+.carte a {
+    margin-top: auto;
+    padding-top: 15px;
+    color: #00d9ff;
+}
+
+/*FOOTER*/
+footer{
+    padding: 30px 8px;
+    background: #061421;
+    text-align: center;
+}
+
+footer a {
+    color: #00d9ff;
+}
+
+/*RESPONSIVE/MOBILE*/
+
+@media(max-width:768px){
+    /*Header*/
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /*Projets*:
+    3 colonnes deviennent 1 colone*/
+    .grille-projets{
+        flex-direction: column;
+    }
+    .carte{
+        width: 100%;
+        flex: none;
+    }
+    /*Competences*/
+    .competences{
+        flex-direction: column;
+    }
+
+    .competences{
+        width: 100%;
+    }
+}
